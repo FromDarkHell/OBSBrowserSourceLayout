@@ -12,9 +12,15 @@ If you want to align the Face Cam / Split Box to the right: add the following CS
 .Container { justify-content: flex-end }
 ```
 
-By default it's aligned to the left
-If you want to customize the background of each element, add .[Class] { background: [CSS Background] } to the custom CSS in OBS
+By default it's aligned to the left<br>
+If you want to customize the background of each element, add the following CSS to the custom CSS in OBS:<br>
+```
+.Class { background: CSS-Background; }
+```
+<br>
+
 If you want to change the size of 16:9 to 4:3, Add the following CSS to your custom CSS:<br>
+
 ```css
 	.TopBorder { display: none; } 
 	.FaceCamBox { height: 302px; width: 536px; } 
