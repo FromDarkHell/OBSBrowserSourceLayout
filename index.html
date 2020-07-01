@@ -1,0 +1,76 @@
+<html>
+
+<!-- 
+If you want to align the Face Cam / Split Box to the right: add `.Container { justify-content: flex-end }` to the custom CSS
+By default it's aligned to the left
+If you want to customize the background of each element, add .[Class] { background: [CSS Background] } to the custom CSS in OBS
+If you want to change the size of 16:9 to 4:3:
+	Add [https://pastebin.com/raw/yBT4exAP] to your custom CSS
+
+Shoutouts to Amber_CXC for inspiring the concept for this layout (download her layouts instead: https://twitter.com/amber_cxc/status/1277308317958844420)
+-->
+
+<style>
+	.TopBorder {
+		position: relative;
+		vertical-align: top;
+
+		width: 100%;
+		height: 43px;
+		background: linear-gradient(0deg, rgba(108,100,100,1) 0%, rgba(48,44,44,1) 100%);
+	}
+
+	.Container {
+		display: flex; 
+		height: 100%
+	}
+
+	.FaceCamBox {
+		position: absolute;
+
+		width: 400px;
+		height: 225px;	
+
+		outline: 1px solid rgb(128,128,128);
+		outline-offset: -1px;
+	}
+
+	.SplitBox {
+		position: absolute;
+		z-index: 100;
+
+		width: 400px;
+		height: 812px;
+		bottom: 0px;
+		background: linear-gradient(0deg, rgba(48,44,44,1) 0%, rgba(108,100,100,1) 100%);
+	}
+
+	.BottomBorder {
+		position: absolute;
+		z-index: 5;
+		left: 0px;
+		bottom: 0px;
+
+		height: 183px;
+		width: 100%;
+		background: linear-gradient(to bottom, rgb(95, 96, 95) 0%, rgb(43, 60, 65) 1%, rgb(61, 89, 93) 100%);
+		
+	}
+</style>
+
+<header class="TopBorder"/>
+
+</header>
+
+<section class="Container">
+	<div class="FaceCamBox">
+	</div>
+
+	<div class="SplitBox">
+	</div>
+</section>
+
+<div class="BottomBorder"/>
+
+
+</html>
